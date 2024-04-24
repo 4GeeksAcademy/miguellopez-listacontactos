@@ -1,3 +1,208 @@
-/* 
-    General Styles
-*/
+body {
+    background-image: url('https://images.pexels.com/photos/2333293/pexels-photo-2333293.jpeg?auto=compress&cs=tinysrgb&w=600'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.barraNav {
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blue;
+    border-radius: .5rem;
+    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+    border-top: 2px solid blue;
+    border-left: 2px solid blue;
+    transition-duration: 1s;
+    transition-property: border-top, 
+       border-left, 
+       border-bottom,
+       border-right,
+       box-shadow;
+   }
+   
+   .barraNav:hover {
+    border-top: 2px solid blue;
+    border-left: 2px solid blue;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+   }
+
+   .btnContacto {
+    width: 500px;
+    height: 60px;
+    border: 3px solid #315cfd;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    color: blue;
+    font-size: 1.2em;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .btnContacto:hover {
+    background: #315cfd;
+    color: white;
+    font-size: 1.5em;
+  }
+   
+  .contContacto {
+    width: 500px;
+    padding-top: 20px;
+  }
+
+  .contContacto {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contContacto::before {
+    margin-left: auto;
+  }
+  
+  .contContacto::after, .contContacto::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  .contContacto:hover::after, .contContacto:hover::before {
+    width: 100%;
+  }
+
+  .lista-contactos {
+    color: blue;
+    text-decoration: none;
+    font-size: 50px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .lista-contactos::before {
+    margin-left: auto;
+  }
+  
+  .lista-contactos::after, .lista-contactos::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  .lista-contactos:hover::after, .lista-contactos:hover::before {
+    width: 100%;
+  }
+
+  .imagenContacto img {
+    border: 5px solid #000;
+  }
+
+  .delete {
+    position: relative;
+    font-size: 0.8em;
+    padding: 0.7em 1.4em;
+    background-color: #BF0426;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  }
+  
+  .delete::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+  
+  .delete:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  
+  .delete:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+  }
+
+  .edit {
+    position: relative;
+    margin-left: 2px;
+    font-size: 0.8em;
+    padding: 0.7em 1.4em;
+    background-color: #BF0426;
+    text-decoration: none;
+    border: none;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  }
+  
+  .edit::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+  
+  .edit:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  
+  .edit:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+  }
+
+  .container {
+    padding-top: 40px;
+  }
+
+  .card {
+    border-radius: 20px;
+    border: solid black 5px;
+  }
+
+  .bntFormulario {
+    width: 400px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  legend {
+    font-size: 40px;
+    border-bottom: red solid 9px;
+  }
