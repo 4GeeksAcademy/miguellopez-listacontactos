@@ -13,8 +13,30 @@ export const Formulario = () => {
   });
 
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Validación de nombre completo
+    if (contacto.name.length === 0 || contacto.name.length > 20) {
+      alert("Por favor ingrese un nombre completo válido (máximo 20 caracteres).");
+      return;
+    }
+    // Validación de email
+    if (contacto.email.length === 0 || contacto.email.length > 20) {
+      alert("Por favor ingrese un email válido (máximo 20 caracteres).");
+      return;
+    }
+    // Validación de teléfono
+    if (contacto.phone.length === 0 || contacto.phone.length > 12 || isNaN(contacto.phone)) {
+      alert("Por favor ingrese un número de teléfono válido (máximo 12 caracteres y solo números).");
+      return;
+    }
+    // Validación de dirección
+    if (contacto.address.length === 0 || contacto.address.length > 20) {
+      alert("Por favor ingrese una dirección válida (máximo 20 caracteres).");
+      return;
+    }
+    // Si pasa todas las validaciones, enviar el formulario
     actions.crearContacto(contacto, navigate);
   };
 
@@ -90,7 +112,6 @@ export const Formulario = () => {
             <button
               type="submit"
               className="btn btn-primary bntFormulario"
-              onClick={(e) => handleSubmit(e)}
             >
               <i>G</i>
               <i>U</i>
